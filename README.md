@@ -163,7 +163,7 @@ Se trovi utile il programma, considera di supportare lo sviluppatore con una don
 
   
 
-## 👨‍💻 Autore
+## 👨‍💻 Autori
 
   
 
