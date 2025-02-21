@@ -167,7 +167,7 @@ Se trovi utile il programma, considera di supportare lo sviluppatore con una don
 
   
 
-**Python Net Blocker** è stato sviluppato da **[Lotverp](https://github.com/Lotverp)** **[Luca](https://github.com/LucaGhostX)** (aggiungere nome o link al profilo).
+**Python Net Blocker** è stato sviluppato da **[Lotverp](https://github.com/Lotverp)** and **[Luca](https://github.com/LucaGhostX)**.
 
   
 
