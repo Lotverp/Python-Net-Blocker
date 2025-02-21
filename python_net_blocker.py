@@ -10,7 +10,7 @@ from typing import Optional, Any
 import webbrowser
 import locale
 
-# Dizionario per le traduzioni in diverse lingue
+# Lingue
 translations = {
     'en': {
         'title': "Python Net Blocker",
@@ -84,23 +84,14 @@ translations = {
         'path': "Percorso",
         'status': "Stato",
         'github': "GitHub",
-        'donate': "Donate"
-    },
-    # ... (altre lingue: 'es', 'fr', 'de', 'pt', 'ru', 'zh', 'ja', 'ko' – omesse per brevità)
+        'donate': "Dona"
+    }
 }
 
-# Mappa per i nomi visualizzati delle lingue
+# Lingue visualizzabili
 display_names = {
     'en': "English",
-    'it': "Italiano",
-    'es': "Español",
-    'fr': "Français",
-    'de': "Deutsch",
-    'pt': "Português",
-    'ru': "Русский",
-    'zh': "中文",
-    'ja': "日本語",
-    'ko': "한국어"
+    'it': "Italiano"
 }
 
 def get_system_language() -> str:
@@ -118,6 +109,7 @@ def get_system_language() -> str:
 class NetBlockerApp:
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
+        self.root.iconbitmap(r".\\myicon.ico")
         # Imposta la lingua di default in base al sistema
         self.current_language = get_system_language()
         self.current_theme = "darkly"  # tema scuro di default
@@ -172,7 +164,7 @@ class NetBlockerApp:
         )
         self.theme_button.pack(side=tk.LEFT, padx=5)
 
-        # Barra di ricerca con etichetta a sinistra (con emoji lente)
+        # Barra di ricerca
         self.search_frame = tk.Frame(root)
         self.search_frame.pack(pady=5, fill=tk.X, padx=10)
         
@@ -187,12 +179,7 @@ class NetBlockerApp:
         self.btn_clear_search = ttk.Button(self.search_frame, text="❌", command=self.clear_search, bootstyle="secondary", padding=(6, 4))
         self.btn_clear_search.pack(side=tk.LEFT, padx=5)
 
-        # Etichetta per l'ordinamento
-        self.sort_label = tk.Label(root, text=translations[self.current_language]['sort'], font=("Arial", 10))
-        self.sort_label.pack(pady=5)
-
         # Configurazione della Treeview:
-        # Le colonne "Name" e "Path" hanno larghezze fisse mentre "Status" si espande per occupare lo spazio residuo (quindi rimane a destra)
         self.app_list = ttk.Treeview(root, columns=("Name", "Path", "Status"), show="headings")
         self.app_list.heading("Name", text=translations[self.current_language]['app_name'], command=lambda: self.sort_column("Name", False))
         self.app_list.heading("Path", text=translations[self.current_language]['path'], command=lambda: self.sort_column("Path", False))
@@ -202,7 +189,7 @@ class NetBlockerApp:
         self.app_list.column("Status", anchor="w", width=150, stretch=True)
         self.app_list.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
 
-        # Pulsanti inferiori (usiamo ttk.Button per un look uniforme)
+        # Pulsanti inferiori
         self.btn_frame = tk.Frame(root)
         self.btn_frame.pack(pady=10)
 
@@ -214,7 +201,6 @@ class NetBlockerApp:
                                       command=self.unblock_app, bootstyle="info", padding=(12, 8))
         self.btn_unblock.pack(side=tk.LEFT, padx=5)
 
-        # Il tasto "Unblock All" ora itera su tutti gli elementi e rimuove la regola per ciascuno
         self.btn_unblock_all = ttk.Button(self.btn_frame, text="🚫 " + translations[self.current_language]['unblock_all'],
                                           command=self.unblock_all_apps, bootstyle="warning", padding=(12, 8))
         self.btn_unblock_all.pack(side=tk.LEFT, padx=5)
@@ -239,7 +225,6 @@ class NetBlockerApp:
         self.search_label.config(text="🔍 " + t['search_label'])
         theme_text = t['dark'] if self.current_theme == "darkly" else t['light']
         self.theme_button.config(text="🎨 " + t['theme'] + ": " + theme_text)
-        self.sort_label.config(text=t['sort'])
         self.btn_block.config(text="🔒 " + t['block'])
         self.btn_unblock.config(text="🔓 " + t['unblock'])
         self.btn_unblock_all.config(text="🚫 " + t['unblock_all'])
@@ -256,22 +241,6 @@ class NetBlockerApp:
         selected = self.language_var.get()
         if selected == "Italiano":
             self.current_language = "it"
-        elif selected == "Español":
-            self.current_language = "es"
-        elif selected == "Français":
-            self.current_language = "fr"
-        elif selected == "Deutsch":
-            self.current_language = "de"
-        elif selected == "Português":
-            self.current_language = "pt"
-        elif selected == "Русский":
-            self.current_language = "ru"
-        elif selected == "中文":
-            self.current_language = "zh"
-        elif selected == "日本語":
-            self.current_language = "ja"
-        elif selected == "한국어":
-            self.current_language = "ko"
         else:
             self.current_language = "en"
         self.update_ui_texts()
@@ -384,7 +353,6 @@ class NetBlockerApp:
 
     def unblock_all_apps(self) -> None:
         t = translations[self.current_language]
-        # Itera su tutti gli elementi della Treeview e prova a rimuovere la regola per ciascuno
         errors = []
         for item in self.app_list.get_children():
             exe_path = self.app_list.item(item)['values'][1]
@@ -398,7 +366,7 @@ class NetBlockerApp:
                     text=True
                 )
             except subprocess.CalledProcessError:
-                # Se la regola non esiste, ignoriamo l'errore
+                # Se la regola non esiste, ignora l'errore
                 pass
         if errors:
             messagebox.showerror(t['error_title'], t['error_unblock_all'].format(", ".join(errors)))
@@ -418,9 +386,6 @@ class NetBlockerApp:
     def sort_column(self, column: str, reverse: bool) -> None:
         self.current_sort_column = column
         self.sort_ascending = not reverse
-        t = translations[self.current_language]
-        sort_direction = "Ascending" if self.sort_ascending else "Descending"
-        self.sort_label.config(text=f"{t['sort']} ({sort_direction})")
         items = [(self.app_list.set(child, column), child) for child in self.app_list.get_children('')]
         items.sort(reverse=not self.sort_ascending)
         for index, (_, child) in enumerate(items):
