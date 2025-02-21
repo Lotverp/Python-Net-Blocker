@@ -44,7 +44,7 @@ pip install psutil ttkbootstrap
 
   
 
-1.  **Avvia il Programma**: Esegui `python_net_blocker.py` o python_net_block.exe.
+1.  **Avvia il Programma**: Esegui `python_net_blocker.py` o `python_net_block.exe`
 
 2.  **Seleziona un'Applicazione**: Scegli dalla lista.
 
@@ -156,7 +156,7 @@ Se trovi utile il programma, considera di supportare lo sviluppatore con una don
 
   
 
--  [**PayPal**](ciao.it) 
+-  [**PayPal**](https://paypal.me/GabrielPolverini) 
 
   
 ---
@@ -167,7 +167,7 @@ Se trovi utile il programma, considera di supportare lo sviluppatore con una don
 
   
 
-**Python Net Blocker** è stato sviluppato da **[Nome Autore](ciao.it)** **[Luca](ciao.it)** (aggiungere nome o link al profilo).
+**Python Net Blocker** è stato sviluppato da **[Lotverp](https://github.com/Lotverp)** **[Luca](https://github.com/LucaGhostX)** (aggiungere nome o link al profilo).
 
   
 
