@@ -27,10 +27,14 @@ pip install psutil ttkbootstrap
 ## 🎰 What Can You Do?
 
 - **➕ Add an Application**: The app lists all active processes, but you can manually add a .exe that is not in process.
+
 - **Block/Unblock**:
-  - 🔒 **Block** to prevent Internet access.
-  - 🔓 **Unblock** to restore access.
+
+   - 🔒 **Block** to prevent Internet access.
+   - 🔓 **Unblock** to restore access.
+
 - 💥 **Unblock All**: A dedicated button to restore Internet access to all apps.
+
 - **🪐 Change Language/Theme**: From the user interface.
 
 ---
