@@ -53,13 +53,13 @@ pip install psutil ttkbootstrap
 
 -  **➕ Aggiungere un applicazione**:  L'app elenca tutte i processi attivi, ma puoi aggiungere manualmente un .exe non in processo
 
--  **Blocca/Sblocca**:
+-  **Funzione di blocco**:
 
 	- 🔒 **Blocca** per impedire l'accesso a Internet.
 
 	- 🔓 **Sblocca** per ripristinare l'accesso.
 
--   💥 **Sblocca Tutto** :  Un tasto apposito per ripristinare l'accesso internet a tutte le app.
+	-💥 **Sblocca Tutto** :  Un tasto apposito per ripristinare l'accesso internet a tutte le app.
 
 -  **🪐 Cambia Lingua/Tema**: Dall'interfaccia utente.
 
