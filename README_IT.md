@@ -40,25 +40,28 @@ pip install psutil ttkbootstrap
 
   
 
-## 🛠️ Come Usare il Programma
+## 🛠️ Esegui/installa il programma
 
   
 
 1.  **Avvia il Programma**: Esegui `python_net_blocker.py` o `python_net_block.exe`
 
-2.  **Seleziona un'Applicazione**: Scegli dalla lista.
+2.  Altrimenti **installa** l'ultima [release](https://github.com/Lotverp/Python-Net-Blocker/releases)  
 
-3.  **Blocca/Sblocca**:
+## 🎰Cosa puoi fare?
 
-- 🔒 **Blocca** per impedire l'accesso a Internet.
 
-- 🔓 **Sblocca** per ripristinare l'accesso.
+-  **➕ Aggiungere un applicazione**:  L'app elenca tutte i processi attivi, ma puoi aggiungere manualmente un .exe non in processo
 
-4.  **Aggiungi un'Applicazione**: Se non è nella lista, usa il pulsante ➕.
+-  **Blocca/Sblocca**:
 
-5.  **Sblocca Tutto**: Usa 🚫 **Sblocca Tutto* per ripristinare l'accesso a tutte le app.
+	- 🔒 **Blocca** per impedire l'accesso a Internet.
 
-6.  **Cambia Lingua/Tema**: Dall'interfaccia utente.
+	- 🔓 **Sblocca** per ripristinare l'accesso.
+
+-   💥 **Sblocca Tutto** :  Un tasto apposito per ripristinare l'accesso internet a tutte le app.
+
+-  **🪐 Cambia Lingua/Tema**: Dall'interfaccia utente.
 
   
 
@@ -75,22 +78,6 @@ Lingue disponibili:
 - 🇮🇹 Italiano
 
 - 🇺🇸 Inglese
-
-- 🇪🇸 Spagnolo
-
-- 🇫🇷 Francese
-
-- 🇩🇪 Tedesco
-
-- 🇵🇹 Portoghese
-
-- 🇷🇺 Russo
-
-- 🇨🇳 Cinese
-
-- 🇯🇵 Giapponese
-
-- 🇰🇷 Coreano
 
   
 
@@ -123,6 +110,7 @@ La lingua predefinita è quella del sistema operativo, ma può essere modificata
 -  **Permessi di Amministratore**: Il programma deve essere eseguito con privilegi elevati. 🛡️
 
 -  **Firewall di Windows**: Assicurati che sia attivo e configurato correttamente.
+-  **La prima volta che viene aperto potrebbe impiegare qualche minuto**, probabilmente l'antivirus di windows effettua una scansione, non andare nel panico e aspettare che il computer faccia il suo lavoro.
 
   
 
@@ -134,15 +122,17 @@ La lingua predefinita è quella del sistema operativo, ma può essere modificata
 
   
 
-Vuoi migliorare Python Net Blocker? Ecco come puoi contribuire:
+Vuoi migliorare **Python Net Blocker**?
+
+- Ecco come puoi contribuire:
 
   
 
-- Segnalare bug o suggerire nuove funzionalità 🐛
+	- Segnalare bug o suggerire nuove funzionalità 🐛
 
-- Aggiungere nuove lingue o migliorare le traduzioni 🌍
+	-  Aggiungere nuove lingue o migliorare le traduzioni 🌍
 
-- Ottimizzare il codice o migliorare l'interfaccia utente 💻
+	-  Ottimizzare il codice o migliorare l'interfaccia utente 💻
 
 ---
 
