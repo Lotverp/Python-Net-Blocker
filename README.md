@@ -1,6 +1,6 @@
 # 🐍 Python Net Blocker 🚫
 
-**Python Net Blocker** is a GUI application that allows you to block or unblock Internet access for specific applications on Windows. It uses Windows firewall rules to manage network traffic. It is a useful tool for those who want to control which applications can access the Internet. 🌐
+**Python Net Blocker** is a GUI application that allows you to block or unblock Internet access for specific applications on Windows. It uses Windows Firewall rules to manage network traffic. It is a useful tool for those who want to control which applications can access the Internet. 🌐
 
 ## 📦 Dependencies
 
@@ -9,7 +9,7 @@ Make sure you have installed the following Python packages:
 - `tkinter` - Standard library for GUI.
 - `psutil` - To obtain information about running processes.
 - `ttkbootstrap` - To enhance the graphical appearance.
-- `subprocess` - To execute system commands (netsh for firewall management).
+- `subprocess` - To execute system commands (netsh for the firewall).
 
 Install dependencies with:
 
@@ -19,16 +19,19 @@ pip install psutil ttkbootstrap
 
 ---
 
-## 🛠️ How to Use the Program
+## 🛠️ Run/Install the Program
 
-1. **Start the Program**: Run `python_net_blocker.py` or `python_net_block.exe`
-2. **Select an Application**: Choose from the list.
-3. **Block/Unblock**:
-   - 🔒 **Block** to prevent Internet access.
-   - 🔓 **Unblock** to restore access.
-4. **Add an Application**: If it's not in the list, use the ➕ button.
-5. **Unblock All**: Use 🚫 **Unblock All** to restore Internet access to all applications.
-6. **Change Language/Theme**: From the user interface.
+1. **Run the Program**: Execute `python_net_blocker.py` or `python_net_block.exe`
+2. Alternatively, **install** the latest [release](https://github.com/Lotverp/Python-Net-Blocker/releases)
+
+## 🎰 What Can You Do?
+
+- **➕ Add an Application**: The app lists all active processes, but you can manually add a .exe that is not in process.
+- **Block/Unblock**:
+  - 🔒 **Block** to prevent Internet access.
+  - 🔓 **Unblock** to restore access.
+- 💥 **Unblock All**: A dedicated button to restore Internet access to all apps.
+- **🪐 Change Language/Theme**: From the user interface.
 
 ---
 
@@ -38,14 +41,6 @@ Available languages:
 
 - 🇮🇹 Italian
 - 🇺🇸 English
-- 🇪🇸 Spanish
-- 🇫🇷 French
-- 🇩🇪 German
-- 🇵🇹 Portuguese
-- 🇷🇺 Russian
-- 🇨🇳 Chinese
-- 🇯🇵 Japanese
-- 🇰🇷 Korean
 
 The default language is the operating system's language, but it can be changed manually.
 
@@ -61,23 +56,26 @@ The default language is the operating system's language, but it can be changed m
 ## ⚠️ Warnings
 
 - **Administrator Permissions**: The program must be run with elevated privileges. 🛡️
-- **Windows Firewall**: Ensure that it is active and properly configured.
+- **Windows Firewall**: Make sure it is active and properly configured.
+- **The first time it is opened, it may take a few minutes**, likely due to Windows Defender scanning it. Do not panic and wait for the computer to complete the process.
 
 ---
 
 ## 🚀 How to Contribute
 
-Do you want to improve Python Net Blocker? Here's how you can contribute:
+Do you want to improve **Python Net Blocker**?
 
-- Report bugs or suggest new features 🐛
-- Add new languages or improve translations 🌍
-- Optimize the code or enhance the user interface 💻
+- Here’s how you can contribute:
+
+  - Report bugs or suggest new features 🐛
+  - Add new languages or improve translations 🌍
+  - Optimize the code or improve the user interface 💻
 
 ---
 
 ## 💰 Donations
 
-If you find this program useful, consider supporting the developer with a donation:
+If you find the program useful, consider supporting the developer with a donation:
 
 - [**PayPal**](https://paypal.me/GabrielPolverini)
 
@@ -85,15 +83,15 @@ If you find this program useful, consider supporting the developer with a donati
 
 ## 👨‍💻 Authors
 
-**Python Net Blocker** was developed by **[Lotverp](https://github.com/Lotverp)** and **[LucaGhostx](https://github.com/LucaGhostX)**.
+**Python Net Blocker** was developed by **[Lotverp](https://github.com/Lotverp)** and **[LucaGhostX](https://github.com/LucaGhostX)**.
 
 ---
 
 ## 🔗 Useful Links
 
-- [Official psutil documentation](https://psutil.readthedocs.io/)
-- [Official ttkbootstrap documentation](https://ttkbootstrap.readthedocs.io/)
-- [Download the latest version of Python](https://www.python.org/downloads/)
+- [Official psutil Documentation](https://psutil.readthedocs.io/)
+- [Official ttkbootstrap Documentation](https://ttkbootstrap.readthedocs.io/)
+- [Download the Latest Version of Python](https://www.python.org/downloads/)
 
 ---
 
