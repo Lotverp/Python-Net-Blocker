@@ -30,7 +30,7 @@ Installa le dipendenze con:
 
 ```bash
 
-pip  install  psutil  ttkbootstrap
+pip install psutil ttkbootstrap
 
 ```
 
@@ -44,7 +44,7 @@ pip  install  psutil  ttkbootstrap
 
   
 
-1.  **Avvia il Programma**: Esegui `python_net_block.py` o python_net_block.exe.
+1.  **Avvia il Programma**: Esegui `python_net_blocker.py` o python_net_block.exe.
 
 2.  **Seleziona un'Applicazione**: Scegli dalla lista.
 
